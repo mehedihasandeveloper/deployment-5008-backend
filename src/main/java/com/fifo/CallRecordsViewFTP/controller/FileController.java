@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins = "http://43.231.78.77:5008", allowCredentials = "true")
+@CrossOrigin(origins = "http://43.231.78.77:5010", allowCredentials = "true")
 public class FileController {
     @Autowired
     private FTPService ftpService;

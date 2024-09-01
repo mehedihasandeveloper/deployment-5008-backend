@@ -26,7 +26,7 @@ import java.util.Collections;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://43.231.78.77:5008", allowCredentials = "true")
+@CrossOrigin(origins = "http://43.231.78.77:5010", allowCredentials = "true")
 public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
