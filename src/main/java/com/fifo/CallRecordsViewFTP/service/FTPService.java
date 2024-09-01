@@ -31,23 +31,23 @@ public class FTPService {
 
     private static final Logger LOGGER = Logger.getLogger(FTPService.class.getName());
 
-//    private static String FTP_SERVER;
+   private static String FTP_SERVER;
     private static final int FTP_PORT = 21;
-//    private static String USERNAME;
-//    private static String PASSWORD;
+   private static String USERNAME;
+   private static String PASSWORD;
 
-    private static final String FTP_SERVER = "192.168.100.100";
-    private static final String USERNAME = "fifoftp";
-    private static final String PASSWORD = "F1f0t3ch";
+    // private static final String FTP_SERVER = "192.168.100.100";
+    // private static final String USERNAME = "fifoftp";
+    // private static final String PASSWORD = "F1f0t3ch";
 
-//    @PostConstruct
-//    private void init() {
-//        // Use @PostConstruct to initialize values after the dependency injection is complete.
-//        FTPLogin loginCre = FTPRepo.findById(1L).orElseThrow(() -> new RuntimeException("FTP login credentials not found"));
-//        FTP_SERVER = loginCre.getServer();
-//        USERNAME = loginCre.getUsername();
-//        PASSWORD = loginCre.getPassword();
-//    }
+   @PostConstruct
+   private void init() {
+       // Use @PostConstruct to initialize values after the dependency injection is complete.
+       FTPLogin loginCre = FTPRepo.findById(1L).orElseThrow(() -> new RuntimeException("FTP login credentials not found"));
+       FTP_SERVER = loginCre.getServer();
+       USERNAME = loginCre.getUsername();
+       PASSWORD = loginCre.getPassword();
+   }
 
     // Download whole folder
     public void downloadFilesFromDirectory(String remoteDirPath, String localDirPath) throws IOException {
