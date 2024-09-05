@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/roles", produces = MediaType.APPLICATION_JSON_VALUE)
-@CrossOrigin(origins = "http://43.231.78.77:5010", allowCredentials = "true")
+@CrossOrigin(origins = {"http://43.231.78.77:5010", "http://voicelog.fifo-tech.com:5010"}, allowCredentials = "true")
 public class RoleController {
     @Autowired
     private RoleService roleService;
