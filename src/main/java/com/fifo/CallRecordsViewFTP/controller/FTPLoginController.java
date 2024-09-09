@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = {"http://43.231.78.77:5010", "http://voicelog.fifo-tech.com:5010", "https://voicelog.fifo-tech.com:5010"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://43.231.78.77:5010", "http://voicelog.fifo-tech.com:5010", "https://voicelog.fifo-tech.com"}, allowCredentials = "true")
 @RequestMapping("/api/FTPLogin")
 public class FTPLoginController {
 
